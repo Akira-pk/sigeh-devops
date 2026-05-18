@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGEH - Control de Mando Hospitalario</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f0f4f8; color: #333; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background: linear-gradient(135deg, #0d6efd, #0a58ca); color: white; padding: 20px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        header h1 { font-size: 24px; margin-bottom: 5px; }
+        .container { flex: 1; max-width: 1200px; margin: 40px auto; padding: 0 20px; width: 100%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid #0d6efd; transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: #0a58ca; margin-bottom: 10px; font-size: 18px; }
+        .status-badge { display: inline-block; padding: 5px 12px; background-color: #d1e7dd; color: #0f5132; border-radius: 20px; font-size: 14px; font-weight: bold; margin-top: 10px; }
+        footer { background-color: #212529; color: #a8aeb4; text-align: center; padding: 15px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SIGEH</h1>
+        <p>Sistema Integral de Gestión Hospitalaria • Panel de Control Core</p>
+    </header>
+
+    <div class="container">
+        <h2>Estado de los Servicios Clínicos</h2>
+        <p>Monitoreo en tiempo real de la arquitectura distribuida del hospital.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Servicio de Historias Clínicas</h3>
+                <p>Acceso cifrado a expedientes médicos bajo estándar interoperable FHIR.</p>
+                <span class="status-badge">● Operacional</span>
+            </div>
+            
+            <div class="card">
+                <h3>Motor Backend (FastAPI)</h3>
+                <p>Procesamiento de peticiones concurrentes optimizado en entorno Docker.</p>
+                <span class="status-badge">● En Línea (Puerto 8000)</span>
+            </div>
+
+            <div class="card">
+                <h3>Base de Datos (PostgreSQL)</h3>
+                <p>Persistencia relacional distribuida con replicación activa y seguridad Multi-AZ.</p>
+                <span class="status-badge">● Conectado</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 SIGEH DevOps - Corporación Universitaria Antonio José de Sucre. Desarrollado bajo estándares SRE.
+    </footer>
+
+</body>
+</html>
